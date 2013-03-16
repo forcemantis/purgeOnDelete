@@ -1,0 +1,8 @@
+<project basedir="." default="undeploy" name="Sample usage of DeployPurge" xmlns:sf="antlib:com.salesforce">
+    <property file="build.properties" />
+    <property environment="env" />
+    <taskdef classname="com.salesforce.ant.DeployPurge" name="deploypurge"/>
+    <target name="undeploy">
+    	<deploypurge username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployroot="removecode"  purgeondelete="true" />
+     </target>
+  </project>
